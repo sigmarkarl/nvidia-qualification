@@ -7,15 +7,6 @@
 
 name: Java CI with Gradle
 
-build:
-  USERNAME:
-    description: "Username to login to registry"
-    required: true
-    default: ${{ github.actor }}
-  PASSWORD:
-    description: "Password to login to registry"
-    required: true
-
 on:
   push:
     branches: [ "main" ]
@@ -40,4 +31,4 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: -PREGISTRY_USER=${{ build.USERNAME }} -PREGISTRY_PASSWORD=${{ build.PASSWORD }} jib
+        arguments: -PREGISTRY_USER=${{ github.actor }} -PREGISTRY_PASSWORD=${{ PASSWORD }} jib
