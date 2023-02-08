@@ -11,6 +11,7 @@ jib {
     from {
         image = "ghcr.io/graalvm/jdk:22.3.1"
         if (project.hasProperty("REGISTRY_USER")) {
+            System.err.println("hello1");
             auth {
                 username = project.findProperty("REGISTRY_USER")?.toString()
                 password = project.findProperty("REGISTRY_PASSWORD")?.toString()
@@ -21,6 +22,7 @@ jib {
         image = project.findProperty("APPLICATION_REPOSITORY")?.toString() ?: "ghcr.io/sigmarkarl/nvidia-qualification:1.1"
         //tags = [project.findProperty("APPLICATION_TAG")?.toString() ?: "1.0"]
         if (project.hasProperty("REGISTRY_USER")) {
+            System.err.println("hello2");
             auth {
                 username = project.findProperty("REGISTRY_USER")?.toString()
                 password = project.findProperty("REGISTRY_PASSWORD")?.toString()
