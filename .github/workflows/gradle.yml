@@ -7,7 +7,7 @@
 
 name: Java CI with Gradle
 
-inputs:
+build:
   USERNAME:
     description: "Username to login to registry"
     required: true
@@ -40,4 +40,4 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: -PREGISTRY_USER=${{ inputs.USERNAME }} -PREGISTRY_PASSWORD=${{ inputs.PASSWORD }} jib
+        arguments: -PREGISTRY_USER=${{ build.USERNAME }} -PREGISTRY_PASSWORD=${{ build.PASSWORD }} jib
