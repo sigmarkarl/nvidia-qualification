@@ -18,7 +18,7 @@ jib {
         }
     }
     to {
-        image = project.findProperty("APPLICATION_REPOSITORY")?.toString() ?: "ghcr.io/sigmarkarl/nvidia-qualification:1.0"
+        image = project.findProperty("APPLICATION_REPOSITORY")?.toString() ?: "ghcr.io/sigmarkarl/nvidia-qualification:1.1"
         //tags = [project.findProperty("APPLICATION_TAG")?.toString() ?: "1.0"]
         if (project.hasProperty("REGISTRY_USER")) {
             auth {
