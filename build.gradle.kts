@@ -47,7 +47,7 @@ repositories {
 }
 
 application {
-    mainClass.set("com.netapp.wave.rapids.QualificationTest")
+    mainClass.set("com.netapp.wave.rapids.QualificationMain")
     applicationDefaultJvmArgs = listOf("--add-opens=java.base/java.io=ALL-UNNAMED",
         "--add-opens=java.base/java.nio=ALL-UNNAMED",
         "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
